@@ -1,0 +1,20 @@
+{
+  "name": "se-leaderboard-exporter",
+  "version": "1.0.0",
+  "description": "An open-source tool to bypass UI restrictions and export StreamElements leaderboards.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.0",
+    "express": "^4.19.0",
+    "express-rate-limit": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
