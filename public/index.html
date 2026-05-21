@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamElements Exporter | Open Source Tool</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f0f0f; color: #e0e0e0; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .container { background: #1a1a1a; padding: 40px; border-radius: 12px; border: 1px solid #333; max-width: 500px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { color: #5dade2; margin-top: 0; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; }
+        p { color: #888; font-size: 14px; line-height: 1.5; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-size: 12px; color: #aaa; margin-bottom: 8px; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; }
+        input { width: 100%; padding: 12px; background: #121212; border: 1px solid #444; color: white; border-radius: 6px; box-sizing: border-box; font-size: 14px; outline: none; transition: border-color 0.2s; }
+        input:focus { border-color: #5dade2; }
+        button { background: #5dade2; color: #111; border: none; padding: 14px; width: 100%; border-radius: 6px; font-weight: bold; font-size: 15px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: filter 0.2s; }
+        button:hover { filter: brightness(1.1); }
+        .disclaimer { margin-top: 25px; padding: 15px; background: #1f1414; border-left: 4px solid #e74c3c; border-radius: 4px; font-size: 13px; color: #d0d0d0; line-height: 1.4; }
+        .github-link { display: inline-block; margin-top: 20px; color: #a2d9ce; text-decoration: none; font-weight: bold; font-size: 13px; text-align: center; width: 100%; }
+        .github-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>📥 SE Leaderboard Exporter</h1>
+        <p>Bypass the UI restrictions and download your complete StreamElements leaderboard as a CSV file instantly.</p>
+        
+        <form action="/api/export" method="POST">
+            <div class="form-group">
+                <label>Channel ID</label>
+                <input type="text" name="channelId" placeholder="e.g. 5e1b2c..." required>
+            </div>
+            <div class="form-group">
+                <label>JWT Token</label>
+                <input type="password" name="jwtToken" placeholder="Found in Channel Settings > Show Secrets" required>
+            </div>
+            <button type="submit">Download CSV Data</button>
+        </form>
+
+        <div class="disclaimer">
+            <strong style="color: #e74c3c; display: block; margin-bottom: 5px;">🛡️ Privacy & Security Guarantee</strong>
+            This is a free, open-source utility. Your JWT Token acts as the master key to your account. <strong>We NEVER save, log, or store your token.</strong> It is held in temporary server memory for the seconds it takes to generate your file, and is immediately destroyed.
+        </div>
+
+        <a href="https://github.com/yourusername/se-exporter" target="_blank" class="github-link">🔍 View the open-source code on GitHub</a>
+    </div>
+
+</body>
+</html>
